@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+
+        <title>Formulário Simples</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="keywords" content="keyword [, keyword]*" />
+        <link rel="stylesheet" type="text/css" href="css/meu_estilo.css" media="all">
+  
+    </head>
+  
+    <body>
+        <div>
+            <form name="wishlist" method="GET" action="wishlist.php">
+
+
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <!--Exemplo de controle com label implícita-->
+                    <!--<label>Nome:<input type="text" /></label>-->
+
+                    <!--Exemplo de controle com label explícita-->
+
+                    <!--  <label for="nome">Foto:</label>
+                      <input type="file" name="img" multiple>
+                    -->
+
+
+                    <label for="postos">Posto/Grad:</label>
+                    <select id="postos" autofocus="">
+                        <optgroup label="Oficiais Generais">
+                            <option value="gen_ex">General de Exército</option>
+                            <option value="gen_div">General de Dvisão</option>
+                            <option value="gen_bda">General de Brigada</option>
+                        </optgroup>
+                        <optgroup label="Oficiais Superiores">
+                            <option value="cel">Coronel</option>
+                            <option value="ten_cel">Tenente Coronel</option>
+                            <option value="maj">Major</option>
+                        </optgroup>
+                        <optgroup label="Oficiais Intermediários">
+                            <option value="cap">Capitão</option>
+                        </optgroup>
+                        <optgroup label="Oficiais Subalternos">
+                            <option value="1ten">1º Tenente</option>
+                            <option value="2ten">2º Tenente</option>
+                        <optgroup label="Praças Especiais">
+                            <option value="asp_of">Asp Oficial</option>
+                        <optgroup label="Praças">
+                            <option value="sten">Subtenente</option>
+                            <option value="1sgt">1º Sargento</option>
+                            <option value="2sgt">2º Sargento</option>
+                            <option value="3sgt">3º Sargento</option>
+                            <option value="cb">Cabo</option>
+                            <option value="sd">Soldado</option>
+                            <option value="" selected="selected"></option>
+                        </optgroup>
+                    </select>
+
+                    <label for="quadros">Arma/Quadro/Serviço:</label>
+                    <select id="quadros">
+                        <optgroup label="Armas">
+                            <option>Infantaria</option>
+                            <option>Cavalaria</option>
+                            <option>Artilharia</option>
+                            <option>Engenharia</option>
+                            <option>Comunicações</option>
+                        </optgroup>
+                        <optgroup label="Quadros">
+                            <option>Material Bélico</option>
+                            <option>Engenheiros Militares</option>
+                        </optgroup>
+                        <optgroup label="Serviços">
+                            <option>Saúde</option>
+                            <option>Intendência</option>
+                            <option value="" selected="selected"></option>
+                        </optgroup>
+                    </select>
+
+
+                    <label for="nome_completo">Nome:</label>
+                    <input type="text" id="nome_completo" value="" size="50"  required="" />
+
+                    <label for="nome_guerra">Nome de guerra:</label>
+                    <input type="text" id="nome_guerra" value="" size="22" placeholder=""/>
+                    <label for="su">SU:</label>
+                    <select id="su">
+                        <option value="1cia">1ª Cia</option>
+                        <option value="2cia">2ª Cia</option>
+                        <option value="ccap">Cia C Ap</option>
+                        <option value="bm">Banda de Música</option>
+                        <option value="npor">NPOR</option>
+                        <option value="" selected="selected"></option>
+                    </select>
+                    <label for="destino">Destino</label>
+                    <select id="destino">
+                        <option value="1cia">Efetivo pronto</option>
+                        <option value="2cia">Férias</option>
+                        <option value="ccap">Op Pipa</option>
+                        <option value="bm">À disp outra OM</option>
+                        <option value="npor">Conv. Residência</option>
+                        <option value="" selected="selected"></option>
+                    </select>
+
+                    <label for="funcao">Função</label>
+                    <select id="funcao">
+                        <option value="auxs1">Aux S1</option>
+                        <option value="auxs2">Aux S2</option>
+                        <option value="auxs3">Aux S3</option>
+                        <option value="auxs4">Aux S4</option>
+                        <option value="auxfisc">Aux Fisc Adm</option>
+                        <option value="" selected="selected"></option>
+                    </select>
+                    
+                     <label for="escala">Tipo de escala</label>
+                    <select id="escala">
+                        <option value="Supdia">Sup. de dia</option>
+                        <option value="Ofdia">Of. de dia</option>
+                        <option value="AdjOf">Adj Of. dia</option>
+                        <option value="GdaQtl">Cmt Gda Qt</option>
+                        <option value="GdaVM">Cmt Gda VM</option>
+                        <option value="" selected="selected"></option>
+                    </select>
+                    
+                    <label for="idt">RG/RA:</label> 
+                    <input type="text" id="idt" value="" size="15" required=""/>
+
+
+                    <label for="org_exp">Órgão expedidor:</label>
+                    <input type="text" id="org_exp" value="" size="15" placeholder="SSP-UF/ITEP"/>
+
+
+                    <label for="nasc">Data de nascimento:</label>          
+                    <input type="date" id="nasc" name="bday" required="">
+
+                    <label>UF</label>
+                    
+                <select id="uf">
+                    <option>Selecione</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espirito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+                      
+                    <label for="praca">Data de praça:</label>          
+                    <input type="date" id="praca" name="bday">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Plano de Chamada</legend>
+                    <!--Exemplo de controle com label implícita-->
+                    <!--<label>Nome:<input type="text" /></label>-->
+
+                    <!--Endereço-->
+
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" value="" size="50" placeholder="Av/Rua/Tr/Beco"/>
+
+                    <label for="complemento">Complemento:</label>
+                    <input type="text" id="complemento" value= "" size="40"/>
+
+                    <label for="bairro">Bairro:</label>
+                    <select id="bairro">
+                        <option value="">Quintas</option>
+                        <option value="">Tirol</option>
+                        <option value="">Petrópolis</option>
+                        <option value="">Morro Branco</option>
+                        <option value="">Neópolis</option>
+                        <option value="">Alecrim</option>
+                        <option selected="selected"></option>
+                    </select>
+                    
+                    
+                    <label for="refr">Ponto de referência:</label>
+                    <input type="text" id="refr" value= "" size="59"/>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" size="40" >
+
+                    <label for="fone">Telefone:</label>
+                    <input type="tel" class="" id="fone" name="fone" data-mask="(00) 0000-0000" data-mask-selectonfocus="true" >
+
+                    
+
+                    <label for="municipio">Município:</label>
+                    <select id="municipio">
+                        <option selected="selected">Natal</option>
+                        <option value="">Macaíba</option>
+                        <option value="">Parnamirim</option>
+                        <option value="">São Gonçalo </option>
+                        <option value="">Goianinha</option>
+                    </select>
+
+                </fieldset>
+
+                  <fieldset> 
+                    <legend>Dados bancários</legend>
+
+                    <label for="cc">Conta corrente:</label>
+                    <input type="text" id="cc" value="" placeholder=""/>
+
+                    <label for="ag">Agência:</label>
+                    <input type="text" id="ag" value="" placeholder=""/>
+
+                    <label for="banco">Banco:</label>
+                    <select id="banco">
+                        <option value="">Banco do Brasil S/A</option>
+                        <option value="">Bradesco</option>
+                        <option value="">Banco Itaú</option>
+                          <option value="">Banco Santander</option>
+                            <option value="">Caixa Econômica Federal</option>
+                        <option value="" selected="selected"></option>
+                    </select>
+
+                   
+                   
+                    <label for="cpf"> CPF:</label>
+                    <input type="text" id="cpf" size="15" placeholder="000.000.000-0">
+
+
+                </fieldset>
+                
+                <fieldset> 
+                    <legend>Outros dados</legend>
+
+                    <label for="pai">Nome do pai:</label>
+                    <input type="text" id="pai" value="" placeholder=""/>
+
+                    <label for="mae">Nome da mãe:</label>
+                    <input type="text" id="mae" value="" placeholder=""/>
+
+                    <label for="escolaridade">Escolaridade:</label>
+                    <select id="escolaridade">
+                        <option value="">Ensino Superior</option>
+                        <option value="">Ensino Médio</option>
+                        <option value="">Ensino Fundamental</option>
+                        <option value="" selected="selected"></option>
+                    </select>
+
+                    <label for="ts">Tipo saguíneo:</label>
+                    <select id="ts">
+                        <option value="">A</option>
+                        <option value="">B</option>
+                        <option value="">AB</option>
+                        <option value="">O</option>
+
+                    </select>
+                    <label for="est_civ">Estado civil:</label>
+                    <select id="est_civ">
+                        <option value="">Solteiro</option>
+                        <option value="">Casado</option>
+                        <option value="">União estável</option>
+                        <option value="" selected="selected"></option>
+
+                    </select>
+
+
+                    <label for="rel">Religião:</label>
+                    <select id="rel">
+                        <option >Católico</option>
+                        <option value="">Evangélico</option>
+                        <option value="">Católico</option>
+                        <option value="">Budista</option>
+                        <option value="">Mulçumano</option>
+                        <option value="">Espírita</option>
+                        <option value="">Outras</option>
+                        <option value="" selected="selected"></option>
+
+                    </select>
+                   
+
+
+                </fieldset>
+                <!--<label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="male"><br>
+                -->
+                
+                <!--<label for="nome">Estado civil:</label>
+                
+                    <input type="radio" name="ec" value="casado" cheked />Casado
+                    <input type="radio" name="ec" value="solteiro" />Solteiro
+    
+                    <label for="nome">Sexo:</label>
+                    <input type="radio" name="sexo" value="feminino" />Feminino
+                    <input type="radio" name="sexo" value="masculino" />Masculino-->
+                <fieldset id="com">
+                    <legend>Comentário</legend>
+                    <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" rows="4" cols="30"></textarea>
+                </fieldset>
+                <!--<input type="submit" value="Enviar" name="salvar" onclick="alert('Dados enviados com sucesso')" />-->
+                <input type="submit" value="Enviar" name="Enviar" />
+                <input type="reset" value="Limpar" name="clear" />
+
+                <!--<button type="submit"><img src="img/enviar.gif" alt="enviar"/></button>-->
+                <!--
+                <label for="nome">Progresso:</label>
+                <progress value="50" max="100">   
+                </progress>-->
+
+                <label>Página em construção</label><br>
+                <img src="img/computador.gif" width="100" height="119" alt="computador" />
+
+
+
+
+
+            </form>
+            <br> Ainda não está cadastrado!? <a href="createNewWisher.php"> Cadastre-se agora </a>
+        </div>
+    </body>
+</html>

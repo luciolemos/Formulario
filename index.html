@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+    <head>
+        <title>Formulário Simples</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="keywords" content="keyword [, keyword]*" />
+        <link rel="stylesheet" type="text/css" href="index.css" media="all">
+    </head>
+</head>
+<body>
+    <div>
+        <form name="wishlist" method="GET" action="wishlist.php">
+
+
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <!--Exemplo de controle com label implícita-->
+                <!--<label>Nome:<input type="text" /></label>-->
+
+                <!--Exemplo de controle com label explícita-->
+
+                <label for="nome">Foto:</label>
+                <input type="file" name="img" multiple>
+
+                <label for="nome">Posto/Grad:</label>
+                <select name="posto_grad">
+                    <optgroup label="Oficiais Generais">
+                        <option value="gen_ex">General de Exército</option>
+                        <option value="gen_div">General de Dvisão</option>
+                        <option value="gen_bda">General de Brigada</option>
+                    </optgroup>
+                    <optgroup label="Oficiais Superiores">
+                        <option value="cel">Coronel</option>
+                        <option value="ten_cel">Tenente Coronel</option>
+                        <option value="maj">Major</option>
+                    </optgroup>
+                    <optgroup label="Oficiais Intermediários">
+                        <option value="cap">Capitão</option>
+                    </optgroup>
+                    <optgroup label="Oficiais Subalternos">
+                        <option value="1ten">1º Tenente</option>
+                        <option value="2ten">2º Tenente</option>
+                    <optgroup label="Praças Especiais">
+                        <option value="asp_of">Asp Oficial</option>
+                    <optgroup label="Praças">
+                        <option value="sten">Subtenente</option>
+                        <option value="1sgt">1º Sargento</option>
+                        <option value="2sgt">2º Sargento</option>
+                        <option value="3sgt">3º Sargento</option>
+                        <option value="" selected="selected"></option>
+                    </optgroup>
+                </select>
+
+                <label for="nome">Quadro/Arma/Serviço:</label>
+                <select name="qas">
+                    <optgroup label="Armas">
+                        <option>Infantaria</option>
+                        <option>Cavalaria</option>
+                        <option>Artilharia</option>
+                        <option>Engenharia</option>
+                        <option>Comunicações</option>
+                    </optgroup>
+                    <optgroup label="Quadros">
+                        <option>Material Bélico</option>
+                        <option>Engenheiros Militares</option>
+                    </optgroup>
+                    <optgroup label="Serviços">
+                        <option>Saúde</option>
+                        <option>Intendência</option>
+                        <option value="" selected="selected"></option>
+                    </optgroup>
+                </select>
+                <label for="nome">SU:</label>
+                <select name="su">
+                    <option value="1cia">1ª Cia</option>
+                    <option value="2cia">2ª Cia</option>
+                    <option value="ccap">Cia C Ap</option>
+                    <option value="bm">Banda de Música</option>
+                    <option value="npor">NPOR</option>
+                    <option value="" selected="selected"></option>
+                </select>
+
+                <label for="nome">Nome completo:</label>
+
+                <input type="text" name="user" value="" size="50" autofocus="" required="" />
+
+                <label for="nome">Nome de guerra:</label>
+                <input type="text" name="guerra" value="" placeholder=""/>
+
+
+                <label for="nome">RG/RA:</label>
+                <input type="text" name="idt" value="" required=""/>
+
+
+                <label for="nome">Órgão expedidor:</label>
+                <input type="text" name="org_exp" value="" placeholder="SSP-UF/ITEP"/>
+
+
+
+                <label for="nome">Data de nascimento:</label>          
+                <input type="date" name="bday" required="">
+
+                <label for="nome">Data de praça:</label>          
+                <input type="date" name="bday">
+            </fieldset>
+
+            <fieldset>
+                <legend>Plano de Chamada</legend>
+                <!--Exemplo de controle com label implícita-->
+                <!--<label>Nome:<input type="text" /></label>-->
+
+
+
+
+
+<!--Endereço-->
+
+                <label for="nome">Endereço:</label>
+                <input type="text" name="endereco" value="" placeholder="Av/Rua/Tr/Beco"/>
+
+                <label for="nome">Complemento:</label>
+                <input type="text" name="complemento" value= ""/>
+
+                <label for="nome">Ponto de referência</label>
+                <input type="text" name="referencia" value= "" size="70"/>
+
+                <label for="nome">Email</label>
+                <input type="email" name="email" size="40">
+
+                <label for="nome">Telefone:</label>
+                <input type="tel" name="usrtel" placeholder="0-0000-0000">
+
+                <label for="nome">Bairro:</label>
+                <select name="bairro">
+                    <option selected="selected">Quintas</option>
+                    <option value="">Tirol</option>
+                    <option value="">Petrópolis</option>
+                    <option value="">Morro Branco</option>
+                    <option value="">Neópolis</option>
+                    <option value="">Alecrim</option>
+                </select>
+
+                <label for="nome">Município:</label>
+                <select name="municipio">
+                    <option selected="selected">Natal</option>
+                    <option value="">Macaíba</option>
+                    <option value="">Parnamirim</option>
+                    <option value="">São Gonçalo </option>
+                    <option value="">Goianinha</option>
+                </select>
+
+            </fieldset>
+
+            <fieldset> 
+                <legend>Outros dados</legend>
+
+                <label for="nome">Nome do pai:</label>
+                <input type="text" name="nome_pai" value="" placeholder=""/>
+
+                <label for="nome">Nome da mãe:</label>
+                <input type="text" name="nome_mae" value="" placeholder=""/>
+
+                <label for="nome">Escolaridade:</label>
+                <select name="escolaridade">
+                    <option value="">Superior</option>
+                    <option value="">Ensino médio</option>
+                    <option value="">Ensino fundamental</option>
+                    <option value="" selected="selected"></option>
+                </select>
+
+                <label for="nome">Tipo saguíneo:</label>
+                <select name="ts">
+                    <option value="">A</option>
+                    <option value="">B</option>
+                    <option value="">AB</option>
+                    <option value="">O</option>
+
+                </select>
+                <label for="nome">Estado civil:</label>
+                <select name="su">
+                    <option value="">Solteiro</option>
+                    <option value="">Casado</option>
+                    <option value="">União estável</option>
+                    <option value="" selected="selected"></option>
+
+                </select>
+
+
+                <label for="nome">Religião:</label>
+                <select name="su">
+                    <option >Católico</option>
+                    <option value="">vEvangélico</option>
+                    <option value="">Espírita</option>
+                    <option value="">Outras</option>
+                    <option value="" selected="selected"></option>
+
+                </select>
+                <label for="nome"> CPF:</label>
+
+                <input type="text" size="15" placeholder="000.000.000-0">
+
+
+            </fieldset>
+
+            <!--<label for="nome">Estado civil:</label>
+                
+            
+            
+            
+            <input type="radio" name="ec" value="casado" cheked />Casado
+                <input type="radio" name="ec" value="solteiro" />Solteiro
+
+                <label for="nome">Sexo:</label>
+                <input type="radio" name="sexo" value="feminino" />Feminino
+                <input type="radio" name="sexo" value="masculino" />Masculino-->
+
+            <!--<label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" rows="4" cols="30"></textarea>-->
+            <!--<input type="submit" value="Enviar" name="salvar" onclick="alert('Dados enviados com sucesso')" />-->
+            <input type="submit" value="Enviar" name="Enviar" />
+            <input type="reset" value="Limpar" name="clear" />
+
+ <!--<button type="submit"><img src="img/enviar.gif" alt="enviar"/></button>-->
+            <!--
+            <label for="nome">Progresso:</label>
+            <progress value="50" max="100">   
+            </progress>-->
+
+            <label>Página em construção</label><br>
+            <img src="img/computador.gif" width="100" height="119" alt="computador" />
+
+
+
+
+
+        </form>
+        <br> Ainda não está cadastrado!? <a href="createNewWisher.php"> Cadastre-se agora </a>
+    </div>
+</body>
+</html>
