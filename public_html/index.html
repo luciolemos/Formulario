@@ -18,7 +18,7 @@ and open the template in the editor.
   
     <body>
         <div>
-            <form name="wishlist" method="GET" action="wishlist.php">
+            <form name="wishlist" method="post" action="wishlist.php">
 
 
                 <fieldset>
@@ -99,7 +99,7 @@ and open the template in the editor.
                         <option value="npor">NPOR</option>
                         <option value="" selected="selected"></option>
                     </select>
-                    <label for="destino">Destino</label>
+                    <label for="destino">Destino:</label>
                     <select id="destino">
                         <option value="1cia">Efetivo pronto</option>
                         <option value="2cia">Férias</option>
@@ -119,7 +119,7 @@ and open the template in the editor.
                         <option value="" selected="selected"></option>
                     </select>
                     
-                     <label for="escala">Tipo de escala</label>
+                     <label for="escala">Tipo de escala:</label>
                     <select id="escala">
                         <option value="Supdia">Sup. de dia</option>
                         <option value="Ofdia">Of. de dia</option>
@@ -139,8 +139,9 @@ and open the template in the editor.
 
                     <label for="nasc">Data de nascimento:</label>          
                     <input type="date" id="nasc" name="bday" required="">
+                                                         
 
-                    <label>UF</label>
+                    <label>UF:</label>
                     
                 <select id="uf">
                     <option>Selecione</option>
@@ -175,6 +176,9 @@ and open the template in the editor.
                       
                     <label for="praca">Data de praça:</label>          
                     <input type="date" id="praca" name="bday">
+                    
+                    <label for="massa">Massa:</label>
+                    <input type="number" name="massa" id="massa" min="20" max="40" >
                 </fieldset>
 
                 <fieldset>
@@ -205,9 +209,9 @@ and open the template in the editor.
                     <label for="refr">Ponto de referência:</label>
                     <input type="text" id="refr" value= "" size="59"/>
 
-                    <label for="email">Email</label>
+                    <label for="email">Email:</label>
                     <input type="email" id="email" size="40" >
-
+                    
                     <label for="fone">Telefone:</label>
                     <input type="tel" class="" id="fone" name="fone" data-mask="(00) 0000-0000" data-mask-selectonfocus="true" >
 
@@ -274,8 +278,8 @@ and open the template in the editor.
                         <option value="">B</option>
                         <option value="">AB</option>
                         <option value="">O</option>
-
                     </select>
+                    
                     <label for="est_civ">Estado civil:</label>
                     <select id="est_civ">
                         <option value="">Solteiro</option>
@@ -320,7 +324,7 @@ and open the template in the editor.
                 <textarea id="mensagem" rows="4" cols="30"></textarea>
                 </fieldset>
                 <!--<input type="submit" value="Enviar" name="salvar" onclick="alert('Dados enviados com sucesso')" />-->
-                <input type="submit" value="Enviar" name="Enviar" />
+                <input type="submit" value="Enviar" name="submit" />
                 <input type="reset" value="Limpar" name="clear" />
 
                 <!--<button type="submit"><img src="img/enviar.gif" alt="enviar"/></button>-->
